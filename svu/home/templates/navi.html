@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        #navbar{
+            /* overflow: hidden; */
+        }
+        #navbar a{
+            display: block;
+            float: left;
+            padding: 1.15%;
+        }
+       
+        #navbar a:hover{
+           background-color: #303631; 
+        }
+
+        #navbar a:nth-child(1){
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            padding-left: 3.5%;
+        }
+    </style>
+
+<div id="navbar" class="mx-auto my-[1%] bg-[#030d03] min-h-[3.25rem] rounded-[15px] pl-3.5%">
+    <a href="/">SVU</a>
+    <a href="/">HOME</a>
+    <a href="#">WIKI</a>
+    <a href="#">DONATE</a>
+    <a href="#">CHAT</a>
+    <a href="/signup">SIGN-UP</a>
+    <a href="#">FAQ</a>
+</div>
+
+</body>
+</html>
+
+<!-- position-sticky -->

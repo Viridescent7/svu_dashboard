@@ -36,7 +36,7 @@ def index(request):
 
     ip_addr = '192.168.0.102'
     return render(request, 'index.html', context={'active_users': [chr(i) for i in range(65, 91)], 
-                                                  'all_users': ['deathstar107', 'SaiDen', 'Duckdarsh', 'Kabutozect', 'sgtstringplucker', 'niffler'], 
+                                                  'all_users': ['deathstar107', 'SaiiDen', 'Duckdarsh', 'Kabutozect', 'sgtstringplucker', 'niffler'], 
                                                   'services': services,
                                                   'ip_addr': ip_addr})  
 

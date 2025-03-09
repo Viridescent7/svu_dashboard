@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Sign-up to SVU{% endblock %}
+
+
+
+{% block main-content %}
+
+<div id="welcome-to-signup" class="  rounded-2">
+    <p class="text-[rgba(176,224,230,1)]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, rem nihil blanditiis 
+       eius provident beatae esse, placeat, dolores nesciunt a at tenetur natus. Repudiandae et 
+       illo soluta voluptate vel repellendus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+       A, laborum. Ab a dolore exercitationem, ipsam, tempore architecto, atque illum accusantium totam alias sequi 
+       facere dignissimos. Maxime qui provident placeat eum.
+    </p>
+
+    <h6 class="text-[rgba(0,228,228,0.8)] mt-[2rem] text-center">*Age Limit to sign up:  15 </h6>
+</div>
+
+<div>
+    <form class="m-[3rem]">
+        <input id="username"  type="text" placeholder="Username" class="mt-[2.5rem]" required />
+        <br>
+        <input id="email" type="text" placeholder="Email" class="mt-[4rem]" required/>
+        <br>
+        <textarea id="why" placeholder="Why join this server?" cols="50" rows="5" class="mt-[4rem] resize" required></textarea>
+        <br>    
+        <textarea id="sshkey" placeholder="Add your SSH public key here" cols="50" rows="3" class="mt-[4rem] resize" required></textarea>
+        <br>
+        
+        <button id="submit-btn" type="submit" class="mt-[5rem]">Submit</button>
+    </form>
+
+</div>
+
+{% endblock %}
+
+

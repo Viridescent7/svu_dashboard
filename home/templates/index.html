@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}SVU{% endblock %}
+
+
+{% block main-content %}
+
+<div id="active-users" class="  rounded-2">
+    {% include "active_users.html" %}
+</div>
+
+<div id="all-users" class="mt-[0.2rem] py-[2rem]">
+    {% include "all_users.html" %}
+</div>
+
+<div id="services" class="mt-[0.2rem] py-[2rem]">
+    {% include "services.html" %}
+</div>
+
+{% endblock %}
+

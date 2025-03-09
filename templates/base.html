@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body class="bg-[#020202] text-[#95FF77] break-keep">
+
+    <style>
+
+        #navdiv{
+            border: 0.05rem solid;
+            border-image: linear-gradient(25deg, rgba(61, 215, 196, 0.7), rgba(51, 255, 153, 0.7));
+            border-image-slice: 1;
+            box-shadow: 0px 0px 10px 2px rgba(247, 190, 200, 0.1),
+                        1px 2px 50px 0.5px rgba(247, 190, 200, 0.15)
+        /* x-offset y-offset blur-radius spread-radius
+        spread-radius responsible for  */
+        }
+
+        #main-content{
+            border: 0.1 rem solid black;
+            box-shadow: -1px -0.8px 10px 0.3px rgba(149, 255, 119, 0.1),
+                        0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
+        }
+    </style>
+    <div id="navdiv" class="bg-[#121112] w-[80%] mx-auto mt-[2%] py-[0.5rem] px-[1rem]">
+        {% include "navi.html" %}
+    </div>
+    <br><br>
+    <div id="main-content" class="w-[80%] mx-auto mt-[0.6%] p-[2rem] mb-[0.5%]">
+        {% block main-content %}
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+        <p class="text-center my-[2%]"></p>
+    </div>
+
+
+
+    
+
+</body>
+</html>
+
+
+<!-- for border:  drop-shadow-[0_30px_100px_rgba(255,255,255,0.8)] -->
+<!-- break-keep  same as word-break: keep-all   makes sure line does not break at hyphen -->

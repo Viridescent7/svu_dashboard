@@ -1,0 +1,11 @@
+{% load static %}
+
+<h1 class="float-left whitespace-nowrap text-lg text-[rgba(191,193,194,0.9)] py-[0.8rem] px-[1.2rem]">Users List</h1>
+<br><br><br>
+<div id="users" class="p-[3rem] grid grid-cols-3 gap-10 ml-[12rem]">
+        {% for user in all_users%}
+            <div>{{ user }}</div>
+        {% endfor %}
+
+</div>
+

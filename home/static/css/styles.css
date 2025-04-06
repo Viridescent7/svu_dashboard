@@ -1,7 +1,8 @@
 #active-users{
-    border: 0.1 rem solid black;
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
     box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
-                0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15); 
+                0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15);	
 }
 
 #all-users{
@@ -27,8 +28,8 @@
 }
 
 #navbar a:nth-child(1){
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: ;
+    border-bottom-left-radius:;
     padding-left: 3.5%;
 }
 

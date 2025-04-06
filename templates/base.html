@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
 </head>
-<body class="bg-[#020202] text-[#95FF77] break-keep">
+<body class="bg-[rgb(9,0,17)] text-[rgba(255,255,255,100)] break-keep">
 
     <style>
 
         #navdiv{
-            border: 0.05rem solid;
-            border-image: linear-gradient(25deg, rgba(61, 215, 196, 0.7), rgba(51, 255, 153, 0.7));
+            border: 0.28rem solid;
+	    border-color:rgba(98,43,92,100);
             border-image-slice: 1;
             box-shadow: 0px 0px 10px 2px rgba(247, 190, 200, 0.1),
                         1px 2px 50px 0.5px rgba(247, 190, 200, 0.15)
@@ -31,11 +31,11 @@
                         0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
         }
     </style>
-    <div id="navdiv" class="bg-[#121112] w-[80%] mx-auto mt-[2%] py-[0.5rem] px-[1rem]">
+    <div id="navdiv" class="bg-[rgba(9,10,12,100)] w-[60%] mx-auto mt-[2%]">
         {% include "navi.html" %}
     </div>
     <br><br>
-    <div id="main-content" class="w-[80%] mx-auto mt-[0.6%] p-[2rem] mb-[0.5%]">
+    <div id="main-content" class="w-[60%] bg-[rgba(9,10,12,100)] mx-auto mt-[0.6%] p-[2rem] mb-[0.5%]">
         {% block main-content %}
         {% endblock %}
     </div>

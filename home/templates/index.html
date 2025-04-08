@@ -3,19 +3,46 @@
 
 {% block title %}SVU{% endblock %}
 
-
 {% block main-content %}
 
-<div id="active-users" class="  rounded-2">
-    {% include "active_users.html" %}
+<div id="active-users" class="rounded-2">
+    <ul class="flex gap-[1rem]">
+        <h1 class="float-left whitespace-nowrap text-lg text-[rgba(191,193,194,0.9)] py-[0.8rem] px-[1.2rem]">Active Users</h1>
+        <marquee direction="left" scrollamount="5">
+            <div class="flex gap-[2rem] pt-[1.25rem] text-[0.8rem]">
+                {% for user in active_users %}
+                    <li>{{ user }}</li>   
+                {% endfor %}
+            </div>
+        </marquee>
+    </ul>
 </div>
+<div id="main-body">
+    <div id="about_us" class="mt-[0.2rem] py-[2rem]">
+        SVU is a tilde community mostly consisting of users who share a unix based operating 
+        system (currently Ubuntu 22.04 LTS). We talk, socialize and self host services which
+        we find useful.
+        <br></br>
+        Welcome!!
+    </div>
+    <div id="how-to" class="mt-[0.2rem] py-[2rem]"> 
+        Each user will get a home directory with a few files already 
+        existing. A user can use gameshell to learn the basic of bash. 
+        There's also seperate lvms mounted where you can store backups,
+        add your own music, movies and shows. 
+    </div>
+</div> 
 
-<div id="all-users" class="mt-[0.2rem] py-[2rem]">
-    {% include "all_users.html" %}
-</div>
+<div id="services-outer" class="mt-[0.2rem] py-[2rem]">
+    <h1 class="float-left whitespace-nowrap text-lg text-[rgba(191,193,194,0.9)] py-[0.5rem] px-[1.2rem]">
+    Hosted Services: 
+    </h1>
+    <div id="services">
+            {% for service, port in services.items %}
+            <a href="http://{{ ip_addr }}:{{ port }}">{{ service }}</a>
+            {% endfor %}
 
-<div id="services" class="mt-[0.2rem] py-[2rem]">
-    {% include "services.html" %}
+    </div>
 </div>
 
 {% endblock %}

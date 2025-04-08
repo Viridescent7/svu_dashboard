@@ -27,7 +27,6 @@ def index(request):
                                                 'all_users': all_users,
                                                 'services': services,
                                                 'ip_addr': '127.0.0.1'})
-
 def render_sign_up(request):
     return render(request, 'sign_up.html' )
 

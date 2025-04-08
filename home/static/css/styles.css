@@ -8,29 +8,6 @@
 spread-radius responsible for  */
 }
 
-#main-content{
-    border: 0.28rem solid;
-    border-color: rgba(98,43,92,100);
-    box-shadow: -1px -0.8px 10px 0.3px rgba(149, 255, 119, 0.1),
-                0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
-}
-
-#active-users{
-    border: 0.28rem solid;
-    border-color:rgb(98,43,92);
-    box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
-                0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15);	
-}
-
-#all-users{
-    border: 0.1rem solid black;
-    box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
-                0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15); 
-
-                /* box-shadow: -1px -0.8px 10px 0.3px rgba(149, 255, 119, 0.1),
-                0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);  */
-}
-
 #navbar{
     /* overflow: hidden; */
 }
@@ -53,6 +30,54 @@ spread-radius responsible for  */
     padding-left: 3.5%;
 }
 
+#main-content{
+    border: 0.28rem solid;
+    border-color: rgba(98,43,92,100);
+    box-shadow: -1px -0.8px 10px 0.3px rgba(149, 255, 119, 0.1),
+                0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
+}
+
+#active-users{
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
+    box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
+                0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15);	
+}
+
+#about_us {
+    display: inline-block;
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
+    width: 35%; /* Narrow width */
+    height: 300px; /* Long height */
+    padding: 10px;
+    margin-top:13px;
+    overflow-y: auto; /* Adds scroll if text overflows */
+    }
+
+#how-to {
+    display: inline-block;
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
+    width: 530px; /* Narrow width */
+    float: right;
+    height: 300px;
+    padding: 10px;
+
+    margin-top:13px;
+    overflow-y: auto; /* Adds scroll if text overflows */
+    }
+
+#services { 
+    width: 800px;
+    height: 100px;
+    padding: 10px;
+}
+
+#services a:hover { 
+    display: inline-block;
+    color: red; 
+}
 
 #username, #email, #why, #sshkey{
     padding: 0.5rem 0.5rem 0.5rem 1rem;

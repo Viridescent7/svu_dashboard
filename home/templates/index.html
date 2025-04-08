@@ -21,29 +21,37 @@
     <div id="about_us" class="mt-[0.2rem] py-[2rem]">
         SVU is a tilde community mostly consisting of users who share a unix based operating 
         system (currently Ubuntu 22.04 LTS). We talk, socialize and self host services which
-        we find useful.
+        we find useful. Welcome!!
+        <hr class="my-4 border-t-2 border-gray-400" />
+        <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
+        Services: 
+        </h1>
         <br></br>
-        Welcome!!
+        <div id="services">
+            <ul class="bullet list">
+                {% for service, port in services.items %}
+                <li><a href="http://{{ ip_addr }}:{{ port }}">{{ service }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
+
     <div id="how-to" class="mt-[0.2rem] py-[2rem]"> 
         Each user will get a home directory with a few files already 
-        existing. A user can use gameshell to learn the basic of bash. 
+        existing. A user can play gameshell.sh to learn the basic of bash. 
         There's also seperate lvms mounted where you can store backups,
-        add your own music, movies and shows. 
+        add your own music, movies and shows. A few things to remember: 
+        <br></br>
+
+        <ul class="bullet list">
+         <li>We do not have disk quotas so please be mindful of how much you upload to the server</li>
+         <li>You'll have to be connected to tailscale to access svu</li>
+         <li>You can request any changes or services you would like through iris</li>
+        </ul>
+    <hr class="my-4 border-t-2 border-gray-400" />
     </div>
 </div> 
 
-<div id="services-outer" class="mt-[0.2rem] py-[2rem]">
-    <h1 class="float-left whitespace-nowrap text-lg text-[rgba(191,193,194,0.9)] py-[0.5rem] px-[1.2rem]">
-    Hosted Services: 
-    </h1>
-    <div id="services">
-            {% for service, port in services.items %}
-            <a href="http://{{ ip_addr }}:{{ port }}">{{ service }}</a>
-            {% endfor %}
-
-    </div>
-</div>
 
 {% endblock %}
 

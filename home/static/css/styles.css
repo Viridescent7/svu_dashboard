@@ -49,10 +49,9 @@ spread-radius responsible for  */
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
     width: 35%; /* Narrow width */
-    height: 300px; /* Long height */
+    height: 500px; /* Long height */
     padding: 10px;
     margin-top:13px;
-    overflow-y: auto; /* Adds scroll if text overflows */
     }
 
 #how-to {
@@ -61,21 +60,29 @@ spread-radius responsible for  */
     border-color:rgb(98,43,92);
     width: 530px; /* Narrow width */
     float: right;
-    height: 300px;
+    height: 360px;
     padding: 10px;
 
     margin-top:13px;
     overflow-y: auto; /* Adds scroll if text overflows */
     }
 
+#how-to ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+#how-to ul.custom li::before {
+  content: "•";
+  margin-right: 8px;
+}
+
 #services { 
-    width: 800px;
+    width: 300px;
     height: 100px;
     padding: 10px;
 }
 
 #services a:hover { 
-    display: inline-block;
     color: red; 
 }
 

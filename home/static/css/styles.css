@@ -100,7 +100,7 @@ spread-radius responsible for  */
     border-color:rgb(98,43,92);
 
     min-width: 20%; /* Narrow width */
-    min-height: 465px;
+    height: 65vh;
 
     padding: 10px;
     margin-top: 13px;
@@ -124,24 +124,21 @@ spread-radius responsible for  */
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
 
-    width: 30%;
-    max-width: 100%; /* Narrow width */
-
+    min-width: 30%;
     height: 80%;
-    max-height: 100vh;
 
     padding: 10px;
     margin-top:13px;
     margin-left: auto;
     margin-bottom: auto;
     flex: 1 1 600px;
-
     }
 
 #how-to ul {
   list-style-type: disc;
   margin-left: 20px;
 }
+
 #how-to ul.custom li::before {
   content: "•";
   margin-right: 8px;

@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 #navdiv{
     border: 0.28rem solid;
     border-color:rgba(98,43,92,100);
@@ -67,34 +72,69 @@ spread-radius responsible for  */
                 0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
 }
 
+#main-body { 
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  #main-body {
+    display: block;
+  }
+}
+
 #active-users{
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
     box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
                 0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15);	
+    height: 100%;
 }
 
 #about_us {
-    display: inline-block;
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
-    width: 35%; /* Narrow width */
-    height: 500px; /* Long height */
+
+    min-width: 200px; /* Narrow width */
+    min-height: 465px;
+
     padding: 10px;
-    margin-top:13px;
+    margin-top: 13px;
+    margin-right: 13px;
+    margin-bottom: auto;
+
+    flex: 1 1 200px;
     }
 
+#services { 
+    width: 300px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#services a:hover { 
+    color: red; 
+}
+
+
 #how-to {
-    display: inline-block;
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
-    width: 530px; /* Narrow width */
-    float: right;
-    height: 360px;
-    padding: 10px;
 
+    width: 600px;
+    max-width: 100%; /* Narrow width */
+
+    height: 400px;
+    max-height: 100vh;
+
+    padding: 10px;
     margin-top:13px;
-    overflow-y: auto; /* Adds scroll if text overflows */
+    margin-left: auto;
+    margin-bottom: auto;
+    flex: 1 1 600px;
+
     }
 
 #how-to ul {
@@ -104,16 +144,6 @@ spread-radius responsible for  */
 #how-to ul.custom li::before {
   content: "•";
   margin-right: 8px;
-}
-
-#services { 
-    width: 300px;
-    height: 100px;
-    padding: 10px;
-}
-
-#services a:hover { 
-    color: red; 
 }
 
 #username, #email, #why, #sshkey{

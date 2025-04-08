@@ -30,6 +30,36 @@ spread-radius responsible for  */
     padding-left: 3.5%;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes flash {
+        50% { opacity: 0; }
+    }
+
+    @keyframes reveal {
+        from { max-width: 2em; } /* Width of ::before */
+        to { max-width: 100%; }
+    }
+
+#runner::before { 
+    content: "$ ";
+}
+
+#runner { 
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal 4s linear;
+    text-overflow: "█";
+    font-size: 1.3rem;
+}
+
+#runner::after {
+    content: "█";
+    animation: flash 0.5s step-end infinite;
+    position: relative;
+    top: -2px;
+    margin-left: 3px;
+}
+
 #main-content{
     border: 0.28rem solid;
     border-color: rgba(98,43,92,100);

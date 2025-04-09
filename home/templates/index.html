@@ -24,14 +24,26 @@
         system (currently Ubuntu 22.04 LTS). We talk, socialize and self host services which
         we find useful. Welcome!!
         <hr class="my-4 border-t-2 border-gray-400" />
-        <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
-        Services: 
-        </h1>
-        <br></br>
-        <div id="services">
+        <div id="services" class="grid">
+            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
+            Services: 
+            </h1>
             <ul class="bullet list">
                 {% for service, port in services.items %}
                 <li><a href="http://{{ ip_addr }}:{{ port }}">{{ service }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <br></br> 
+        <br></br> 
+        <hr class="my-4 border-t-2 border-gray-400" />
+        <div id="tilde" class="grid">
+            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
+             All Users: 
+            </h1>
+            <ul class="bullet list">
+                {% for user in all_users %}
+                <li>~{{ user }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -50,6 +62,25 @@
          <li>You can request any changes or services you would like through iris</li>
         </ul>
     <hr class="my-4 border-t-2 border-gray-400" />
+        <div id="what-is" class="mt-[0.2rem] py-[0.6rem]"> 
+            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)]">
+                What is a Tilde Community? 
+            </h1> 
+        <br></br>
+        A tilde community is essentially a collection of users sharing a *nix system.
+        Members of the community use the system as a platform to collobarate, build cool
+        things and socialize with each other. <a href="https://tilde.club">tilde.club</a> 
+        was the first tilde community that introduced the idea of a shared nix system after
+        which several have originated, forming the tildverse
+        </div> 
+    <hr class="my-4 border-t-2 border-gray-400" />
+    <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)]">
+        The tildeverse:&nbsp
+    </h1> 
+    <a href="https://ctrl-c.club">ctrl-c.club</a>
+    <a href="https://tilde.club">tilde.club</a>
+    <a href="https://tilde.team">tilde.team</a>
+    <a href="club">thunix</a>
     </div>
 </div> 
 

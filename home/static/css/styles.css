@@ -3,18 +3,15 @@ html, body {
   margin: 0;
 }
 
-#navdiv{
+
+#navbar{
     border: 0.28rem solid;
     border-color:rgba(98,43,92,100);
     border-image-slice: 1;
     box-shadow: 0px 0px 10px 2px rgba(247, 190, 200, 0.1),
-                1px 2px 50px 0.5px rgba(247, 190, 200, 0.15)
-/* x-offset y-offset blur-radius spread-radius
-spread-radius responsible for  */
-}
+                1px 2px 50px 0.5px rgba(247, 190, 200, 0.15);
 
-#navbar{
-    min-height: 50px;
+    min-height: 60px;
     /* overflow: hidden; */
 }
 #navbar a{
@@ -22,7 +19,7 @@ spread-radius responsible for  */
     float: left;
     padding-top: 1.5%;
     padding-left: 2%;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     padding-right: 2%;
 
 }
@@ -74,19 +71,6 @@ spread-radius responsible for  */
                 0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
 }
 
-#main-body { 
-  margin: 0;
-  display: inline-flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-  #main-body {
-    display: block;
-  }
-}
-
 #active-users{
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
@@ -95,25 +79,44 @@ spread-radius responsible for  */
     height: 100%;
 }
 
+#main-body { 
+  margin: 0;
+  display: flex;
+  min-height: 100%;
+  flex-wrap: wrap;
+
+}
+
+#main-body a:hover { 
+    color: red; 
+}
+
+@media (max-width: 768px) {
+  #main-body {
+    display: block;
+    margin: 0;
+  }
+}
+
 #about_us {
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
 
     min-width: 20%; /* Narrow width */
-    height: 65vh;
+    min-height: 90%;
 
     padding: 10px;
     margin-top: 13px;
     margin-right: 13px;
     margin-bottom: auto;
 
-    flex: 1 1 200px;
+    flex: 1 1 20%;
     }
 
 #services { 
     width: 300px;
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: auto;
 }
 
 #services a:hover { 
@@ -125,13 +128,13 @@ spread-radius responsible for  */
     border-color:rgb(98,43,92);
 
     min-width: 30%;
-    height: 80%;
+    min-height: 90%;
 
     padding: 10px;
-    margin-top:13px;
+    margin-top: 13px;
     margin-left: auto;
     margin-bottom: auto;
-    flex: 1 1 600px;
+    flex: 1 1 65%;
     }
 
 #how-to ul {

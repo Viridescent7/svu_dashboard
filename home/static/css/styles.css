@@ -1,37 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 html, body {
   height: 100%;
   margin: 0;
 }
 
+h1 { 
+  font-family: 'Space Mono';
+  color: #f2e8ff;
+  background: linear-gradient(145deg, #e9ddff, #cbb2ff, #a780ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-#navbar{
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 4px rgba(204, 179, 255, 0.3),
+    0 0 8px rgba(182, 142, 255, 0.2),
+    2px 4px 10px rgba(100, 0, 200, 0.15),
+    -1px -1px 3px rgba(255, 255, 255, 0.03);
+}
+
+#navbar {
     border: 0.28rem solid;
     border-color:rgba(98,43,92,100);
     border-image-slice: 1;
     box-shadow: 0px 0px 10px 2px rgba(247, 190, 200, 0.1),
                 1px 2px 50px 0.5px rgba(247, 190, 200, 0.15);
 
+    margin-top: 20px;
     min-height: 60px;
-    /* overflow: hidden; */
+
+    display: flex;
+    justify-content: left; 
+    align-items: left;
+    flex-wrap: wrap; 
+
+    
 }
+
 #navbar a{
-    display: block;
-    float: left;
-    padding-top: 1.5%;
-    padding-left: 2%;
-    padding-bottom: 12px;
-    padding-right: 2%;
-
+   transition: color 0.3s ease;
+   padding: 1rem 2rem;
+   display: block;
 }
 
-#navbar a:hover{
-   background-color: #303631; 
-}
-
-#navbar a:nth-child(0){
-    padding-bottom: 5px;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+#navbar a:hover {
+   background: linear-gradient(145deg, #2b2b2b, #1a1a1a);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -43,6 +57,7 @@ html, body {
         from { max-width: 2em; } /* Width of ::before */
         to { max-width: 100%; }
     }
+}
 
 #runner::before { 
     content: "$ ";
@@ -64,19 +79,23 @@ html, body {
     margin-left: 3px;
 }
 
-#main-content{
+#main-content {
     border: 0.28rem solid;
     border-color: rgba(98,43,92,100);
     box-shadow: -1px -0.8px 10px 0.3px rgba(149, 255, 119, 0.1),
                 0.3px 1.1px 1px -0.3px rgba(149, 255, 119, 0.15);       
 }
 
-#active-users{
+#active-users {
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
     box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
                 0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15);	
     height: 100%;
+}
+
+#active-users h1 { 
+  font-size: 1.3rem;
 }
 
 #main-body { 
@@ -119,8 +138,16 @@ html, body {
     margin-bottom: auto;
 }
 
+#services h1 {
+    font-size: 1.4rem;
+}
+
 #services a:hover { 
     color: red; 
+}
+
+#all-users h1 {
+    font-size: 1.4rem;
 }
 
 #how-to {
@@ -145,6 +172,10 @@ html, body {
 #how-to ul.custom li::before {
   content: "•";
   margin-right: 8px;
+}
+
+#what-is h1 { 
+    font-size: 1.7rem;
 }
 
 #username, #email, #why, #sshkey{
@@ -186,4 +217,3 @@ html, body {
         background-color: rgba(105,105,105, 0.3);
     }
 }
-

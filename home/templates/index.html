@@ -3,12 +3,14 @@
 
 
 {% block title %}SVU{% endblock %}
-{% block runner%}<h1 id="runner">{{ quote }}</h1> {% endblock %} 
+{% block runner %}<h1 id="runner">{{ quote }}</h1> {% endblock %} 
 
-{% block main-content %}
-<div id="active-users" class="rounded-2">
+{% block active-users %} 
+<div id="active-users" class="w-[70%] rounded-2 bg-[rgba(9,10,12,100)] mx-auto mt-[0.6%] mb-[0.5%]">
     <ul class="flex gap-[1rem]">
-        <h1 class="float-left whitespace-nowrap text-lg text-[rgba(191,193,194,0.9)] py-[0.8rem] px-[1.2rem]">Active Users</h1>
+        <h1 class="float-left whitespace-nowrap text-lg text-[rgba(191,193,194,0.9)] py-[0.9rem] px-[1.2rem]">
+            Active Users:
+        </h1>
         <marquee direction="left" scrollamount="5">
             <div class="flex gap-[2rem] pt-[1.25rem] text-[0.8rem]">
                 {% for user in active_users %}
@@ -18,6 +20,9 @@
         </marquee>
     </ul>
 </div>
+{% endblock %}
+
+{% block main-content %}
 <div id="main-body">
     <div id="about_us" class="mt-[0.2rem] py-[2rem]">
         SVU is a tilde community mostly consisting of users who share a unix based operating 
@@ -37,7 +42,7 @@
         <br></br> 
         <br></br> 
         <hr class="my-4 border-t-2 border-gray-400" />
-        <div id="tilde" class="grid">
+        <div id="all-users" class="grid">
             <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
              All Users: 
             </h1>
@@ -74,13 +79,15 @@
         which several have originated, forming the tildverse
         </div> 
     <hr class="my-4 border-t-2 border-gray-400" />
-    <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)]">
+    <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] mt-[1rem]">
         The tildeverse:&nbsp
     </h1> 
-    <a href="https://ctrl-c.club">ctrl-c.club</a>
-    <a href="https://tilde.club">tilde.club</a>
-    <a href="https://tilde.team">tilde.team</a>
-    <a href="club">thunix</a>
+    <div id="tilde-links" class="mt-[2.1rem]">
+        <a href="https://ctrl-c.club">ctrl-c.club</a>
+        <a href="https://tilde.club">tilde.club</a>
+        <a href="https://tilde.team">tilde.team</a>
+        <a href="https://www.thunix.net">thunix</a>
+    </div>
     </div>
 </div> 
 

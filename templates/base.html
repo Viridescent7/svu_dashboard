@@ -12,9 +12,7 @@
 
 </head>
 <body class="bg-[rgb(9,0,17)] text-[rgba(255,255,255,100)] break-keep">
-    <div id="navdiv" class="bg-[rgba(9,0,17,100)] w-[70%] mx-auto mt-4">
-        {% include "navi.html" %}
-    </div>
+    {% include "navi.html" %}
     <br><br>
 
     <div id="runner-outer" class="w-[70%] mx-auto mt-[0.6%] p-[1rem] mb-[0.3%]">
@@ -22,6 +20,10 @@
     {% endblock %} 
     </div> 
 
+    <div id="active-users-outer">
+        {% block active-users %}
+        {% endblock %}
+    </div> 
     <div id="main-content" class="w-[70%] bg-[rgba(9,10,12,100)] mx-auto mt-[0.6%] p-[2rem] mb-[0.5%]">
         {% block main-content %}
         {% endblock %}

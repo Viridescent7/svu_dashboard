@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 html, body {
-  height: 100%;
   margin: 0;
+}
+
+body {
+  background: radial-gradient(
+    circle at center,
+    #1a001f 0%,   /* deep purple */
+    #0b0b14 100%  /* dark navy/charcoal */
+  );
+  margin: 0;
+  padding: 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
 h1 { 

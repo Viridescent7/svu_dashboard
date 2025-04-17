@@ -42,7 +42,7 @@ def index(request):
     return render(request, 'index.html', context={'active_users': active_users,
                                                 'all_users': all_users,
                                                 'services': services,
-                                                'ip_addr': 'svu',
+                                                'ip_addr': '100.72.58.114',
                                                 'quote': quote,
                                                 })
 def render_sign_up(request):

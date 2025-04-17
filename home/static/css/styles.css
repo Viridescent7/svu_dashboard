@@ -185,7 +185,7 @@ h1 {
 }
 
 #what-is h1 { 
-    font-size: 1.7rem;
+  font-size: calc(1rem + 1vw);
 }
 
 #username, #email, #why, #sshkey{

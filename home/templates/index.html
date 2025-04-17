@@ -34,8 +34,14 @@
             Services: 
             </h1>
             <ul class="bullet list">
-                {% for service, port in services.items %}
-                <li><a href="http://{{ ip_addr }}:{{ port }}">{{ service }}</a></li>
+                {% for service, elements in services.items %}
+                {% with port=elements.0 icon=elements.1 %}
+                <li><a href="http://{{ ip_addr }}:{{ port }}">
+                        <i class="{{ icon }}"></i>
+                        {{ service }}
+                    </a>
+                </li>
+                {% endwith %}
                 {% endfor %}
             </ul>
         </div>

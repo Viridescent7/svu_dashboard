@@ -19,9 +19,13 @@ def index(request):
     all_users = [ user.strip('\n') for user in tmp_users ]
 
     # Running services 
-    services = {
-        'Dnote':'3000', 'Jellyfin':'8096', 'Jellyseer':'5055',
-        'Hacktricks':'3337', 'Hacktricks Cloud':'3377', 'KASM':'8141',
+    services = { 
+        'Dnote': ['3000', 'bi bi-journal'], 
+        'Jellyfin': ['8096', 'bi bi-play-fill'], 
+        'Jellyseer': ['5055', 'bi bi-binoculars-fill'],
+        'Hacktricks': ['3337', 'bi bi-bookmark-fill'],
+        'Hacktricks Cloud': ['3377', 'bi bi-cloud-haze-fill'],
+        'KASM': ['8141', 'bi bi-pc-display-horizontal'],
         }
 
     lines = [ "All that is gold does not glitter",
@@ -39,7 +43,8 @@ def index(request):
                                                 'all_users': all_users,
                                                 'services': services,
                                                 'ip_addr': 'svu',
-                                                'quote': quote })
+                                                'quote': quote,
+                                                })
 def render_sign_up(request):
     return render(request, 'sign_up.html' )
 

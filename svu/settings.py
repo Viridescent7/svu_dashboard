@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-x$)819%kdyd*s6dhsg+hb#uoa)m9zixhw6*@=4ahyp8(3(5+g9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'svu', 'svu-1.tail83963.ts.net', '100.72.58.114', '127.0.0.1' ]
+ALLOWED_HOSTS = [ 'svu', 'svu.gentoo-gopher.ts.net', '100.72.58.114', '127.0.0.1' ]
 
 
 # Application definition

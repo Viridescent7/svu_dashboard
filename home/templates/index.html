@@ -35,8 +35,8 @@
             </h1>
             <ul class="bullet list">
                 {% for service, elements in services.items %}
-                {% with port=elements.0 icon=elements.1 %}
-                <li><a href="http://{{ ip_addr }}:{{ port }}">
+                {% with port=elements.0 icon=elements.1 protocol=elements.2 %}
+                <li><a href="{{ protocol }}://{{ ip_addr }}:{{ port }}">
                         <i class="{{ icon }}"></i>
                         {{ service }}
                     </a>

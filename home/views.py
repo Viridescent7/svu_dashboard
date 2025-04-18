@@ -20,12 +20,12 @@ def index(request):
 
     # Running services 
     services = { 
-        'Dnote': ['3000', 'bi bi-journal'], 
-        'Jellyfin': ['8096', 'bi bi-play-fill'], 
-        'Jellyseer': ['5055', 'bi bi-binoculars-fill'],
-        'Hacktricks': ['3337', 'bi bi-bookmark-fill'],
-        'Hacktricks Cloud': ['3377', 'bi bi-cloud-haze-fill'],
-        'KASM': ['8141', 'bi bi-pc-display-horizontal'],
+        'Dnote': ['3000', 'bi bi-journal', 'http'], 
+        'Jellyfin': ['8096', 'bi bi-play-fill', 'http'], 
+        'Jellyseer': ['5055', 'bi bi-binoculars-fill', 'http'],
+        'Hacktricks': ['3337', 'bi bi-bookmark-fill', 'http'],
+        'Hacktricks Cloud': ['3377', 'bi bi-cloud-haze-fill', 'http'],
+        'KASM': ['8141', 'bi bi-pc-display-horizontal', 'https'],
         }
 
     lines = [ "All that is gold does not glitter",

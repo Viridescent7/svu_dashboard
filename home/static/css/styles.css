@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 html, body {
-  margin: 0;
-}
-
-body {
   background: radial-gradient(
     circle at center,
     #1a001f 0%,   /* deep purple */

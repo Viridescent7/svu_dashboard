@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.conf import settings
 import random 
 import os
 
@@ -28,14 +29,12 @@ def index(request):
         'KASM': ['8141', 'bi bi-pc-display-horizontal', 'https'],
         }
 
-    lines = [ "All that is gold does not glitter",
-             "Not all those who wander are lost",
-             "The old that is strong does not wither",
-             "Deep roots are not reached by the frost",
-             "From the ashes a fire shall be woken",
-             "A light from the shadows shall spring",
-             "Renewed shall be made what was once broken",
-             "The crownless shall once again be king" ]
+    lines = []
+    lines_path = os.path.join(settings.BASE_DIR, "home", "static", "text", "affirmations.txt" )
+    with open(lines_path, "r") as file:
+        for line in file.readlines():
+            lines.append(line)
+
 
     quote = random.choice(lines) 
 

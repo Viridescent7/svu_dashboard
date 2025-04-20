@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}SVU{% endblock %}
+{% block runner %}<h1 id="runner">Enlighten yourself</h1> {% endblock %} 
+
+
+{% block main-content %}
+<div id="main-body"> 
+    <div id="articles">
+        <h1>A few articles of our choosing</h1>
+        <br></br>
+        <ul class="bullet list">
+            <li>Introduction:</li>
+            <div id="links">
+                <ul class="bullet list">
+                    <li><a href="">Basics of Commands</a></li>
+                    <li><a href="">How to use SSH</a></li>
+                    <li><a href="">Old School Socializing</a></li>
+                    <li><a href="/wiki/gemini">What is Gemini and how to use it?</a></li>
+                </ul>
+            </div>
+            <br></br>
+            <li>Important Readings</li> 
+            <div id="links"> 
+                <ul class="bullet list">
+                    <li><a href="https://blog.siccsegv.com/why-use-linux">Why use Linux?</a></li>
+                    <li><a href="http://www.catb.org/esr/faqs/hacker-howto.html">How to become a Hacker</a></li>
+                    <li><a href="http://www.catb.org/~esr/writings/cathedral-bazaar">Cathedral and the Bazaar</a></li>
+                    <li><a href="https://www.eff.org/cyberspace-independence#main-content">A Declaration of the Independence of Cyberspace</a></li>
+                    <li><a href="https://brocku.ca/MeadProject/Baldwin/Baldwin_1909.html">The Influence of Darwin on Theory of Knowledge and Philosophy</a></li>
+        </ul> 
+    </div>
+</div> 
+{% endblock %}

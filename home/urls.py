@@ -1,8 +1,9 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import *
 
 
 urlpatterns = [  
     path('', index, name="index"),
     path('signup', render_sign_up, name="signup"),
+    re_path(r'wiki(?:/(?P<path>.*))?$', render_wiki, name="wiki"),
 ]

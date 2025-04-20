@@ -47,4 +47,11 @@ def index(request):
 def render_sign_up(request):
     return render(request, 'sign_up.html' )
 
+def render_wiki(request, path): 
+
+    if path == 'gemini': 
+        return render(request, 'articles/gemini.html') 
+    else:
+        return render(request, 'wiki.html') 
+
 

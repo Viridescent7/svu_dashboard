@@ -184,6 +184,27 @@ h1 {
   font-size: calc(1rem + 1vw);
 }
 
+#articles ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+#articles ul.custom li::before {
+  content: "•";
+  margin-right: 8px;
+}
+
+#links ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+#links ul.custom li::before {
+  content: "•";
+  margin-right: 8px;
+}
+
+
 #username, #email, #why, #sshkey{
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     border: 0.1rem solid black;

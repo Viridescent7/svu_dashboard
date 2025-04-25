@@ -206,6 +206,29 @@ a:hover {
     font-size: 1.4rem;
 }
 
+#random-art { 
+    display: flex;
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
+
+    width: 95%;
+    height: 28%;
+    padding: 10px;
+    margin-top: 12px;
+
+    justify-content: center;   
+    align-items: center;
+    word-wrap: break-word; 
+}
+
+#random-art h1 { 
+  text-align: left;         /* Align text to the left */
+  margin: 0;                /* Remove any default margin */
+  position: absolute;       /* Position element relative to its closest positioned ancestor */
+  top: 0;                   /* Align it to the top */
+  left: 0;                  /* Align it to the left */
+}
+
 #how-to {
     border: 0.28rem solid;
     border-color:rgb(98,43,92);

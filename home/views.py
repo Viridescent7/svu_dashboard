@@ -11,6 +11,8 @@ def index(request):
     active_users = []
     all_users = []
 
+    cowsay = os.popen("fortune -s").read
+
     # Active users 
     tmp_users = os.popen("last -w | grep logged | awk '{print $1}'").readlines()
     [ active_users.append(user.strip('\n')) for user in tmp_users if user.strip('\n') not in active_users ]
@@ -43,6 +45,7 @@ def index(request):
                                                 'services': services,
                                                 'ip_addr': '100.72.58.114',
                                                 'quote': quote,
+                                                'cowsay': cowsay,
                                                 })
 def render_sign_up(request):
     return render(request, 'sign_up.html' )

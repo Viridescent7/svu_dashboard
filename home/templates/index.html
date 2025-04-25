@@ -24,76 +24,105 @@
 
 {% block main-content %}
 <div id="main-body">
-    <div id="about_us" class="mt-[0.2rem] py-[2rem]">
-        SVU is a tilde community mostly consisting of users who share a unix based operating 
-        system (currently Ubuntu 22.04 LTS). We talk, socialize and self host services which
-        we find useful. Welcome!!
-        <hr class="my-4 border-t-2 border-gray-400" />
-        <div id="services" class="grid">
-            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
-            Services: 
-            </h1>
-            <ul class="bullet list">
-                {% for service, elements in services.items %}
-                {% with port=elements.0 icon=elements.1 protocol=elements.2 %}
-                <li><a href="{{ protocol }}://{{ ip_addr }}:{{ port }}">
-                        <i class="{{ icon }}"></i>
-                        {{ service }}
-                    </a>
-                </li>
-                {% endwith %}
-                {% endfor %}
-            </ul>
-        </div>
-        <br></br> 
-        <br></br> 
-        <hr class="my-4 border-t-2 border-gray-400" />
-        <div id="all-users" class="grid">
-            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
-             All Users: 
-            </h1>
-            <ul class="bullet list">
-                {% for user in all_users %}
-                <li>~{{ user }}</li>
-                {% endfor %}
-            </ul>
+    <div id="left-div">
+        <div id="about_us" class="mt-[0.2rem] py-[2rem]">
+            SVU is a tilde community mostly consisting of users who share a unix based operating 
+            system (currently Ubuntu 22.04 LTS). We talk, socialize and self host services which
+            we find useful. Welcome!!
+            <hr class="my-4 border-t-2 border-gray-400" />
+            <div id="services" class="grid">
+                <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
+                Services: 
+                </h1>
+                <ul class="bullet list">
+                    {% for service, elements in services.items %}
+                    {% with port=elements.0 icon=elements.1 protocol=elements.2 %}
+                    <li><a href="{{ protocol }}://{{ ip_addr }}:{{ port }}">
+                            <i class="{{ icon }}"></i>
+                            {{ service }}
+                        </a>
+                    </li>
+                    {% endwith %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <br></br> 
+            <br></br> 
+            <hr class="my-4 border-t-2 border-gray-400" />
+            <div id="all-users" class="grid">
+                <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] py-[0.5rem]">
+                 All Users: 
+                </h1>
+                <ul class="bullet list">
+                    {% for user in all_users %}
+                    <li>~{{ user }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div id="how-to" class="mt-[0.2rem] py-[2rem]"> 
-        Each user will get a home directory with a few files already 
-        existing. A user can play gameshell.sh to learn the basic of bash. 
-        There's also seperate lvms mounted where you can store backups,
-        add your own music, movies and shows. A few things to remember: 
-        <br></br>
+    <div id="right-div">
+        <div id="how-to" class="mt-[0.2rem] py-[2rem]"> 
+            Each user will get a home directory with a few files already 
+            existing. A user can play gameshell.sh to learn the basic of bash. 
+            There's also seperate lvms mounted where you can store backups,
+            add your own music, movies and shows. A few things to remember: 
+            <br></br>
 
-        <ul class="bullet list">
-         <li>We do not have disk quotas so please be mindful of how much you upload to the server</li>
-         <li>You'll have to be connected to tailscale to access svu</li>
-         <li>You can request any changes or services you would like through iris</li>
-        </ul>
-    <hr class="my-4 border-t-2 border-gray-400" />
-        <div id="what-is" class="mt-[0.2rem] py-[0.6rem]"> 
-            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)]">
-                What is a Tilde Community? 
+            <ul class="bullet list">
+             <li>We do not have disk quotas so please be mindful of how much you upload to the server</li>
+             <li>You'll have to be connected to tailscale to access svu</li>
+             <li>You can request any changes or services you would like through iris</li>
+            </ul>
+            <hr class="my-4 border-t-2 border-gray-400" />
+                <div id="what-is" class="mt-[0.2rem] py-[0.6rem]"> 
+                    <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)]">
+                        What is a Tilde Community? 
+                    </h1> 
+                <br></br>
+                A tilde community is essentially a collection of users sharing a *nix system.
+                Members of the community use the system as a platform to collobarate, build cool
+                things and socialize with each other. <a href="https://tilde.club">tilde.club</a> 
+                was the first tilde community that introduced the idea of a shared nix system after
+                which several have originated, forming the tildverse
+                </div> 
+            <hr class="my-4 border-t-2 border-gray-400" />
+            <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] mt-[1rem]">
+                The tildeverse:&nbsp
             </h1> 
-        <br></br>
-        A tilde community is essentially a collection of users sharing a *nix system.
-        Members of the community use the system as a platform to collobarate, build cool
-        things and socialize with each other. <a href="https://tilde.club">tilde.club</a> 
-        was the first tilde community that introduced the idea of a shared nix system after
-        which several have originated, forming the tildverse
-        </div> 
-    <hr class="my-4 border-t-2 border-gray-400" />
-    <h1 class="float-left whitespace-nowrap text-[rgba(191,193,194,0.9)] mt-[1rem]">
-        The tildeverse:&nbsp
-    </h1> 
-    <div id="tilde-links" class="mt-[2.1rem]">
-        <a href="https://ctrl-c.club">ctrl-c.club</a>
-        <a href="https://tilde.club">tilde.club</a>
-        <a href="https://tilde.team">tilde.team</a>
-        <a href="https://www.thunix.net">thunix</a>
-    </div>
+            <div id="tilde-links" class="mt-[2.1rem]">
+                <a href="https://ctrl-c.club">ctrl-c.club</a>
+                <a href="https://tilde.club">tilde.club</a>
+                <a href="https://tilde.team">tilde.team</a>
+                <a href="https://www.thunix.net">thunix</a>
+            </div>
+        </div>
+
+        <div id="info-link"> 
+            <div id="user-info">
+                <h1>In our Hearth</h1>
+                <hr class="my-3 border-t-2 border-gray-400" />
+            </div> 
+            <div id="projects"> 
+                <h1>Cool Projects</h1>
+                <hr class="my-3 border-t-2 border-gray-400" />
+                <ul class="bullet list">
+                    <li><a href="https://github.com/mindhuntr/dark-send">dark-send</a>:<br> A CLI telegram tool</li>
+                    <li><a href="https://github.com/X0R0X/cli-torrent-dl">cli-torren-dl</a>:<br> torrent aggregator</li>
+                    <li><a href="https://github.com/Achno/gowall">gowall</a>:<br> wallpaper theming</li>
+                    <li><a href="github.com/TrueMyst/BeatPrints">beatprints</a>:<br> cool song posters</li>
+                    <li><a href="https://github.com/Benexl/yt-x">yt-x</a>:<br> youtube in terminal</li>
+                </ul>
+                <br>
+                <h1>Useful Links</h1>
+                <hr class="my-3 border-t-2 border-gray-400" />
+                <ul class="bullet list">
+                    <li><a href="https://fmhy.net/">fmhy</a>:<br> free media!</li>
+                    <li><a href="https://dab.yeet.su/">DAB</a>:<br> download flac songs</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div> 
 

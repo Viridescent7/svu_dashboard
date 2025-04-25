@@ -26,6 +26,15 @@ h1 {
     -1px -1px 3px rgba(255, 255, 255, 0.03);
 }
 
+a { 
+    color: #5D3FD3;
+}
+
+a:hover, a:focus {
+  color: #FF00FF; /* Neon Blue hover */
+  text-shadow: 0 0 6px #FF00FF, 0 0 10px #FF00FF;
+}
+
 #navbar {
     border: 0.28rem solid;
     border-color:rgba(98,43,92,100);
@@ -48,6 +57,7 @@ h1 {
    transition: color 0.3s ease;
    padding: 1rem 2rem;
    display: block;
+   color: white;
 }
 
 #navbar a:hover {
@@ -112,6 +122,18 @@ h1 {
 
 }
 
+#left-div { 
+    min-width: 20%; /* Narrow width */
+    min-height: 90%;
+    flex: 1 1 20%;
+}
+
+#right-div { 
+    min-width: 30%;
+    min-height: 90%;
+    flex: 1 1 65%;
+}
+
 #main-body a:hover { 
     color: red; 
 }
@@ -127,15 +149,11 @@ h1 {
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
 
-    min-width: 20%; /* Narrow width */
-    min-height: 90%;
-
     padding: 10px;
     margin-top: 13px;
     margin-right: 13px;
     margin-bottom: auto;
 
-    flex: 1 1 20%;
     }
 
 #services { 
@@ -148,8 +166,8 @@ h1 {
     font-size: 1.4rem;
 }
 
-#services a:hover { 
-    color: red; 
+#services a { 
+    color: white;
 }
 
 #all-users h1 {
@@ -160,14 +178,11 @@ h1 {
     border: 0.28rem solid;
     border-color:rgb(98,43,92);
 
-    min-width: 30%;
-    min-height: 90%;
-
     padding: 10px;
     margin-top: 13px;
     margin-left: auto;
     margin-bottom: auto;
-    flex: 1 1 65%;
+
     }
 
 #how-to ul {
@@ -183,6 +198,39 @@ h1 {
 #what-is h1 { 
   font-size: calc(1rem + 1vw);
 }
+
+#info-link { 
+    display: flex; 
+}
+
+#user-info { 
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
+    margin-top: 13px;
+    padding: 10px;
+    width: 58%;
+}
+
+#projects { 
+    border: 0.28rem solid;
+    border-color:rgb(98,43,92);
+    margin-top: 13px;
+    margin-left: auto;
+    padding: 10px;
+    width: 40%;
+
+}
+
+#projects ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+#projects ul.custom li::before {
+  content: "•";
+  margin-right: 8px;
+}
+
 
 #articles ul {
   list-style-type: disc;

@@ -11,7 +11,9 @@ def index(request):
     active_users = []
     all_users = []
 
-    cowsay = os.popen("fortune -s").read
+    fortune = os.popen("fortune -s").read()
+    uptime = os.popen("uptime -p").read()[3:]
+    
 
     # Active users 
     tmp_users = os.popen("last -w | grep logged | awk '{print $1}'").readlines()
@@ -40,13 +42,16 @@ def index(request):
 
     quote = random.choice(lines) 
 
-    return render(request, 'index.html', context={'active_users': active_users,
-                                                'all_users': all_users,
-                                                'services': services,
-                                                'ip_addr': '100.72.58.114',
-                                                'quote': quote,
-                                                'cowsay': cowsay,
-                                                })
+    return render(request, 'index.html', context={
+        'active_users': active_users,
+        'all_users': all_users,
+        'services': services,
+        'ip_addr': '100.72.58.114',
+        'quote': quote,
+        'fortune': fortune,
+        'uptime': uptime,
+    })
+
 def render_sign_up(request):
     return render(request, 'sign_up.html' )
 

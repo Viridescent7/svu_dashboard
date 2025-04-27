@@ -41,6 +41,23 @@ a:hover {
   color: #FF00FF; /* Neon Blue hover */
   text-shadow: 0 0 6px #FF00FF, 0 0 10px #FF00FF;
 }
+pre {
+  background-color: #000000; 
+  color: #b47bff; /* Neon purple text for code */
+  font-family: 'Anonymous Pro', monospace;
+  padding: 1em;
+  overflow-x: auto;
+  white-space: pre; 
+  tab-size: 4; 
+  -moz-tab-size: 4; 
+  border: 1px solid #2d0d45; /* Dark purple border for subtle accent */
+  box-shadow: 0 0 8px rgba(180, 123, 255, 0.15); /* Light purple glow effect */
+  margin: 0;
+}
+
+code { 
+    display: inline;
+}
 
 #navbar {
     border: 0.28rem solid;

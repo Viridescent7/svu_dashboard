@@ -59,6 +59,8 @@ def render_wiki(request, path=None):
 
     if path == 'gemini': 
         return render(request, 'articles/gemini.html') 
+    if path == 'intro_to_ssh':
+        return render(request, 'articles/intro_to_ssh.html') 
     else:
         return render(request, 'wiki.html') 
 

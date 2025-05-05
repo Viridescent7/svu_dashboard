@@ -36,10 +36,11 @@
                 </h1>
                 <ul class="bullet list">
                     {% for service, elements in services.items %}
-                    {% with port=elements.0 icon=elements.1 protocol=elements.2 %}
+                    {% with port=elements.0 icon=elements.1 protocol=elements.2 status=elements.3 %}
                     <li><a href="{{ protocol }}://{{ ip_addr }}:{{ port }}">
                             <i class="{{ icon }}"></i>
                             {{ service }}
+                            <i class="bi bi-broadcast {% if status == 'online' %}online{% else %}offline{% endif %}"></i>
                         </a>
                     </li>
                     {% endwith %}

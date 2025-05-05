@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
+import socket 
 import random 
 import os
 
@@ -32,6 +33,15 @@ def index(request):
         'Hacktricks Cloud': ['3377', 'bi bi-cloud-haze-fill', 'http'],
         'KASM': ['8141', 'bi bi-pc-display-horizontal', 'https'],
         }
+
+    for service, items in services.items(): 
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as soc: 
+            try:
+                soc.connect(('127.0.0.1',int(items[0])))
+                items.append('online')
+            except socket.error:
+                items.append('offline')
+
 
     lines = []
     lines_path = os.path.join(settings.BASE_DIR, "home", "static", "text", "affirmations.txt" )

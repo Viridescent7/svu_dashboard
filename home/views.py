@@ -71,6 +71,8 @@ def render_wiki(request, path=None):
         return render(request, 'articles/gemini.html') 
     if path == 'intro_to_ssh':
         return render(request, 'articles/intro_to_ssh.html') 
+    if path == 'why_use_commands':
+        return render(request, 'articles/why_use_commands.html') 
     else:
         return render(request, 'wiki.html') 
 

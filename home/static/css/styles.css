@@ -5,17 +5,17 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap'); */
 
-html, body {
+body {
   background: radial-gradient(
     circle at center,
     #1a001f 0%,   /* deep purple */
     #0b0b14 100%  /* dark navy/charcoal */
   );
-  margin: 0;
+  margin: auto;
   padding: 0;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
   font-family: 'Anonymous Pro', monospace;
   font-weight: 550;
+  max-width: 1160px;
 }
 
 h1 { 
@@ -73,8 +73,8 @@ code {
     justify-content: left; 
     align-items: left;
     flex-wrap: wrap; 
+    width: 90%;
 
-    
 }
 
 #navbar a{
@@ -98,6 +98,10 @@ code {
         from { max-width: 2em; } /* Width of ::before */
         to { max-width: 100%; }
     }
+}
+
+#runner-outer { 
+    width: 90%;
 }
 
 #runner::before { 
@@ -133,10 +137,15 @@ code {
     box-shadow: -1px -0.8px 10px 0.3px rgba(229,228,226, 0.1),
                 0.3px 1.1px 1px -0.3px rgba(229,228,226, 0.15);	
     height: 100%;
+    width: 90%;
 }
 
 #active-users h1 { 
   font-size: 1.3rem;
+}
+
+#main-content { 
+    width: 90%;
 }
 
 #main-body { 
@@ -245,8 +254,15 @@ code {
   margin-right: 8px;
 }
 
+#what-is { 
+    overflow-wrap: break-word;
+}
+
 #what-is h1 { 
   font-size: calc(1rem + 1vw);
+  white-space: normal;      
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #info-link { 
@@ -269,6 +285,9 @@ code {
     padding: 10px;
     width: 40%;
 
+    white-space: normal;      
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 #projects ul {

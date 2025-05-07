@@ -328,3 +328,7 @@ code {
   margin-right: 8px;
 }
 
+#irc-how ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}

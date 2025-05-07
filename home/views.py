@@ -76,4 +76,5 @@ def render_wiki(request, path=None):
     else:
         return render(request, 'wiki.html') 
 
-
+def render_chat(request): 
+    return render(request, 'chat.html') 

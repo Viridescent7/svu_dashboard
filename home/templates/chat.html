@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}SVU{% endblock %}
+{% block runner %}<h1 id="runner">We dont use Whatsapp and neither should you</h1> {% endblock %} 
+
+{% block main-content %}
+<div id="main-body"> 
+    <p>
+    Most of us are in a private telegram group that is bridged to an irc channel
+    called #svu in Libera chat. You can chat with us by either setting up your 
+    own irc client. You can select from a list <a href="https://libera.chat/guides/clients">
+    here</a>. Or you can simply chat using your <a href="https://web.libera.chat/#svu">browser.</a>
+    The key for the room is "magnificentsteiner". You do not need to provide a password.
+    <br></br>
+    </p>
+    <div class="irc-title w-[50%]">
+        <h1 class="text-[25px]">What is IRC?</h1>
+        <hr class="my-3 border-t-2 border-gray-400" />
+    </div>
+    <p>
+    IRC expands to "Internet Relay Chat" which represents a protocol that faciliates 
+    communication between users real time. Its an open and decenteralised system 
+    that is still used by many people for communication within the open source community
+    each other. There are many irc <a href="https://www.mirc.com/servers.html">servers</a> 
+    you can connect to and each server has many channels prefixed by a "#" that you can join. 
+    Channels  are created based on subjects of interest. There are a few things to know before 
+    exploring irc. 
+    <br></br>
+    </p>
+    <div id="irc-how">
+        <ul class="bullet list">
+            <li>Channels prefixed by a "#" denote official channels and ones with "##" are unoffical</li>
+            <li>You can join any public channel but a few of them require invites or keys to enter</li>
+            <li>If you have sent a query to a channel patiently wait for the response</li>
+            <li>Its best to not directly pm anyone unless they explicitly ask you to</li>
+            <li>You can search for channels in Libera using the alis bot. Do "/query alis"</li>
+        </ul> 
+    </div>
+
+</div> 
+{% endblock %} 

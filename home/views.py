@@ -73,6 +73,8 @@ def render_wiki(request, path=None):
         return render(request, 'articles/intro_to_ssh.html') 
     if path == 'why_use_commands':
         return render(request, 'articles/why_use_commands.html') 
+    if path == 'in_the_beginning_was_the_commandline':
+        return render(request, 'articles/in_the_beginning_was_the_commandline.html') 
     else:
         return render(request, 'wiki.html') 
 

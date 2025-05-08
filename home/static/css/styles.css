@@ -59,6 +59,12 @@ code {
     display: inline;
 }
 
+ol {
+    list-style-type: decimal;
+    margin-left: 20px; /* Optional: indent the list */
+    padding-left: 40px;
+  }
+
 #navbar {
     border: 0.28rem solid;
     border-color:rgba(98,43,92,100);

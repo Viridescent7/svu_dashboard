@@ -17,7 +17,7 @@ def index(request):
     
 
     # Active users 
-    tmp_users = os.popen("last -w | grep logged | awk '{print $1}'").readlines()
+    tmp_users = os.popen("who | awk ' !/tmux/ && !/screen/ {print $1}' | sort | uniq").readlines()
     [ active_users.append(user.strip('\n')) for user in tmp_users if user.strip('\n') not in active_users ]
 
     # All users 

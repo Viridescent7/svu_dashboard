@@ -185,6 +185,14 @@ ol {
     display: block;
     margin: 0;
   }
+
+  #info-link { 
+    flex-direction: column;
+  }
+
+  #projects, #user-info {
+    width: 100% !important; 
+  }
 }
 
 #about_us {

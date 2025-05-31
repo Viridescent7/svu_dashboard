@@ -32,6 +32,7 @@ def index(request):
         'Hacktricks': ['3337', 'bi bi-bookmark-fill', 'http'],
         'Hacktricks Cloud': ['3377', 'bi bi-cloud-haze-fill', 'http'],
         'KASM': ['8141', 'bi bi-pc-display-horizontal', 'https'],
+        'Stump': ['10801', 'bi bi-book', 'http'],
         }
 
     for service, items in services.items(): 

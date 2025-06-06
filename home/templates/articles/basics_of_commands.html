@@ -16,6 +16,7 @@
         <li><a href="#cd">Change directory with cd</a></li>
         <li><a href="#ls">List contents with ls</a></li>
         <li><a href="#mkdir">Make directory with mkdir</a></li>
+        <li><a href="#mv">Use mv/cp to move and copy files</a></li>
         <li><a href="#rm">rm/rmdir to remove files and directories</a></li>
         <li><a href="#cat">Read the contents of a file with cat</a></li>
         <li><a href="#nano">Use nano for basic file editing</a></li>
@@ -54,6 +55,7 @@ There are many commands within a Linux system but only a few pertain to the basi
 cd - change directory 
 ls - list contents 
 mkdir - make directory 
+mv and cp - move and copy files 
 rm and rmdir - remove files and directories
 cat - read the contents of a file
 nano - basic file editing 
@@ -193,6 +195,41 @@ This could create a directory called "fumes" and "funnels" in the current direct
 <p>
 This comand creates a nested directory structure recursively starting from "a" and ending with "d". The -p flag is used quite often with the mkdir command.  
 </p>
+<br>
+
+<h1 id="mv" class="text-[1.2rem]">Use mv/cp to move and copy files</h1>
+<br>
+
+<p>
+The mv command is used to move a file from one location to another. It can be invoked quite simply 
+<p>
+<br>
+
+<pre><code>mv file storehouse/files</code></pre>
+<br>
+
+<p>
+The mv command also accepts multiple arguments in which case, the last argument is assumed to be the destination and all the preceding arguments will be moved there 
+<p>
+<br>
+
+<pre><code>mv file1 file2 file3 storehouse/files</code></pre>
+<br>
+
+<p>
+mv is also used to implicitly rename a file and this can be done even when the file is being moved to another location
+<p>
+<br>
+
+<pre><code>mv file1 storehouse/files/renamed_file</code></pre>
+<br>
+
+<p>
+This renames "file1" to "renamed_file" when it is being moved to the directory "files". The cp command has an identical structure, the only difference being that it makes a copy of the files instead of moving them. To copy a set of files simply 
+<p>
+<br>
+
+<pre><code>cp file1 file2 storehouse/copied_files</code></pre>
 <br>
 
 <h1 id="rm" class="text-[1.2rem]">rm/rmdir to remove files and directories</h1>

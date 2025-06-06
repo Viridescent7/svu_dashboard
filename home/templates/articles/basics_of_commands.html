@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}SVU{% endblock %}
+{% block runner %}<h1 id="runner">Basics of the Command Line</h1> {% endblock %} 
+
+{% block main-content %}
+
+<h1 class="text-[1.4rem]">Table of Contents</h1>
+<br>
+<div class="table-of-contents">
+<ol> 
+        <li><a href="#what_are_commands">What are Commands</a></li>
+        <li><a href="#intro_to_commands">Introduction to Commands</a></li>
+        <li><a href="#cd">Change directory with cd</a></li>
+        <li><a href="#ls">List contents with ls</a></li>
+        <li><a href="#mkdir">Make directory with mkdir</a></li>
+        <li><a href="#rm">rm/rmdir to remove files and directories</a></li>
+        <li><a href="#cat">Read the contents of a file with cat</a></li>
+        <li><a href="#nano">Use nano for basic file editing</a></li>
+        <li><a href="#man">The man pages</a></li>
+</ol>
+</div>
+<br>
+
+<p>
+Commands are the heart of any Linux based operating system. If you have read the previous wiki article "Why should you use the command line?", I think little explanation is necessary as to why the command line is such an essential aspect of using Linux. As I had previously suggested, you can mostly get by in normal use without using much of the terminal but I think its imperative to atleast have a basic understanding of how commands work. I believe as you read this wiki, you'll understand that textual communication with your computer is not as mystical as it seems. 
+</p>
+<br>
+
+<h1 id="what_are_commands" class="text-[1.2rem]">What are Commands</h1>
+<br>
+
+<p>
+Commands are nothing but programs you execute in order to perform a specific task. Just like how you have GUI applications that perform tasks such as drawing or editing a video, commands you execute in a terminal is also fundamentally an application, the only difference being that GUI applications render a visual interface whereas commands rely on transmitting their output to the terminal. Terminal emulators and shells are two essential components of what we refer to as the "Command Line". Sometimes these two words are often used interchangeably but there's a clear distinction between them. 
+</p>
+<br>
+
+<p>
+A terminal emulator is nothing but a program that emulates a "teletype" within a graphical interface so that command line programs can display their output to a user. A shell is a program that simply helps us execute commands by finding their location in the system. The most common shell program that is used is called bash (Bourne Again Shell). A shell program also provides functionalities we can use to combine the outputs of various commands, pipe the output of one command to an input of another or even loop a particular command for a specific number of times. This expressive capability of the shell is what makes the command line far more efficient than a GUI.  
+</p>
+<br>
+
+<h1 id="intro_to_commands" class="text-[1.2rem]">Introduction to commands</h1>
+<br>
+
+<p>
+There are many commands within a Linux system but only a few pertain to the basic tasks a user generally performs on a computer such as:- navigating the file system, removing files, copying, moving or searching for files. So the commands you will need to learn initially are: 
+</p>
+<br>
+
+<pre><code>
+cd - change directory 
+ls - list contents 
+mkdir - make directory 
+rm and rmdir - remove files and directories
+cat - read the contents of a file
+nano - basic file editing 
+man - manual for commands
+</code></pre>
+<br>
+
+<h1 id="cd" class="text-[1.2rem]">Change directory with cd</h1>
+<br>
+
+<p>
+cd allows you to change to a particular directory in a filesystem. Although it is technically a shell builtin and not a command, the way it is invoked remains the same. Suppose if a user is in the home directory, usually denoted by the symbol "~", he can change to a directory inside his home called "macro" using the command: 
+</p>
+<br>
+
+<pre><code>cd macro</code></pre>
+<br>
+
+<p>
+All commands are structured in a similar manner. First the name of the command is invoked which in this case is cd and then the argument for the command is provided. But what do we do if we want to access another directory within the macro directory, do we have to use the cd command twice? Not necessarily. Since the Linux filesystem is arranged in a hierarchical manner you can reference any file or directory in the system from anywhere by knowing the "path" of a file or folder. Unlike windows everything in a Linux system is under the root directory, denoted by a "/". The filesystem tree in Linux looks quite like this: 
+</p>
+<br>
+
+<pre><code>
+/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+│   └── martian
+│       └── macro
+│           └── files
+│               └── readme.txt
+├── lib
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+├── var
+</code></pre>
+<br>
+
+<p>
+By default, logging in as the user "martian" drops you in the home directory which is "/home/martian". If I wanted to go to the directory named "files" inside macro, I could simply do: 
+</p>
+<br>
+
+<pre><code>cd macro/files</code></pre>
+<br>
+
+<p>
+This would directly drop me inside the files directory under macro. All commands, in order to operate on a file requires its path. Previously the "cd macro" command worked because cd assumes that any argument you provide without a leading "/" is in the current directory. Similarly with "cd macro/files", since macro was in the current directory it was able to find the "files" folder within macro. Both of these are examples of a "relative path" being used as an argument. A user can also use the "absolute path" of a file: 
+</p>
+<br>
+
+<pre><code>cd /home/martian/macro/files</code></pre>
+<br>
+
+<p>
+This command specifies the path of the file from the root directory and therefore can be used anywhere regardless of your current working directory. 
+</p>
+<br>
+
+<h1 id="ls" class="text-[1.2rem]">List contents with ls</h1>
+<br>
+
+<p>
+The ls command allows you to list the contents of a directory, often used in conjunction with cd. To simply list the contents of the current directory the user can invoke ls without any arguments.
+</p>
+<br>
+
+<pre><code>ls</code></pre>
+<br>
+
+<p>
+The contents of a directory can be listed by passing its relative or absolute path. 
+</p>
+<br>
+
+<pre><code>ls macro</code></pre>
+<br>
+
+<pre><code>ls /home/martian/macro</code></pre>
+<br>
+
+<p>
+The behaviour of ls command can also be slightly modified by the usage of flags. Flags are essentially arguments that is provided to a command with a leading "-". These flags mostly change the a way a particular command functions. For instance in order to list the contents of a directory along with its attributes 
+</p>
+<br>
+
+<pre><code>ls -l macro</code></pre>
+<br>
+
+<p>
+This command provides a lot more details than simply executing ls without a flag. ls can also list hidden files which are files prefixed with a "." using 
+</p>
+<br>
+
+<pre><code>ls -a macro</code></pre>
+<br>
+
+<p>
+Both of these flags can also be combined together to list attributes and hidden files and ls also accepts multiple arguments
+</p>
+<br>
+
+<pre><code>ls -al macro macro/files</code></pre>
+<br>
+
+<h1 id="mkdir" class="text-[1.2rem]">Make directory with mkdir</h1>
+<br>
+
+<p>
+The mkdir command as the name suggests is used to create a directory. The command accepts multiple arguments and can be invoked like 
+</p>
+<br>
+
+<pre><code>mkdir fumes funnel</code></pre>
+<br>
+
+<p>
+This could create a directory called "fumes" and "funnels" in the current directory. The mkdir command with the -p flag or the --parent flag can also create nested directories. For instance 
+</p>
+<br>
+
+<pre><code>mkdir -p a/b/c/d</code></pre>
+<br>
+
+<p>
+This comand creates a nested directory structure recursively starting from "a" and ending with "d". The -p flag is used quite often with the mkdir command.  
+</p>
+<br>
+
+<h1 id="rm" class="text-[1.2rem]">rm/rmdir to remove files and directories</h1>
+<br>
+
+<p>
+The rm command allows a user to remove a file and is once again invoked similarly to the previous commands. To remove a file simply 
+</p>
+<br>
+
+<pre><code>rm removeme.txt</code></pre>
+<br>
+
+<p>
+rm also accepts multiple arguments separated by a space 
+</p>
+<br>
+
+<pre><code>rm removed.txt there.txt</code></pre>
+<br>
+
+<p>
+The rm command also supports the -i flag which essentially tells it to prompt the user before removing each file. This can be particularly useful when removing multiple files in batch.  
+</p>
+<br>
+
+<pre><code>rm -i this.txt can.txt be.txt removed.txt</code></pre>
+<br>
+
+<p>
+In order to remove files the rmdir command can be used but rmdir only works if the directory is empty 
+</p>
+<br>
+
+<pre><code>rmdir empty_dir</code></pre>
+<br>
+
+<p>
+There is another, potentially dangerous command that can be used to remove all the contents of a directory recursively and it is 
+</p>
+<br>
+
+<pre><code>rm -rf dangerous_dir</code></pre>
+<br>
+
+<p>
+This command must be used with extreme caution as it force removes files and directories under a directory recursively. It becomes very difficult to recover any data if this command is executed without due caution.
+<p>
+<br>
+
+<h1 id="cat" class="text-[1.2rem]">Read the contents of a file with cat</h1>
+<br>
+
+<p>
+The cat command expands to "concatenate" and is perhaps one of the very few commands whose name doesnt overtly suggest its common use. The cat command can be used to read the contents of a file 
+<p>
+<br>
+
+<pre><code>cat readme</code></pre>
+<br>
+
+<p>
+Its name comes from the fact that if multiple arguments are given to cat, it "concatenates" them together. The cat command is the most used command to read a file. 
+<p>
+<br>
+
+<h1 id="nano" class="text-[1.2rem]">Use nano for basic file editing</h1>
+<br>
+
+<p>
+Nano is a command line text editor that lets you interactively edit files. To use nano on a file 
+<p>
+<br>
+
+<pre><code>nano editme.txt</code></pre>
+<br>
+
+<p>
+This would open the file with its contents and drop you in a command line interface. Once you finish editing the file you can simply Ctrl+S and exit with Ctrl+X. nano is quite minimalistic and learning to use it to edit files happens very quickly. 
+<p>
+<br>
+
+<h1 id="man" class="text-[1.2rem]">The man pages</h1>
+<br>
+
+<p>
+As you can see the syntax for all commands remain more or less the same. There are slight differences in the flags but the structure of each command is quite identical. There's another command called man that allows you to see the instructions on how to use a specific program. In order to peruse the instructions for the command cat simply do 
+<p>
+<br>
+
+<pre><code>man cat</code></pre>
+<br>
+
+<p>
+This would return a detailed description of the command cat and all the different flags it has to offer. 
+</p>
+<br>
+
+{% endblock %}

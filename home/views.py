@@ -76,6 +76,8 @@ def render_wiki(request, path=None):
         return render(request, 'articles/why_use_commands.html') 
     if path == 'in_the_beginning_was_the_commandline':
         return render(request, 'articles/in_the_beginning_was_the_commandline.html') 
+    if path == 'intro_to_commands':
+        return render(request, 'articles/basics_of_commands.html') 
     else:
         return render(request, 'wiki.html') 
 

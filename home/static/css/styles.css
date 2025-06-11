@@ -181,6 +181,19 @@ ol {
 }
 
 @media (max-width: 768px) {
+
+  #navbar { 
+      width: 94%;
+  }
+
+  #active-users { 
+      width: 94%;
+  }
+
+  #main-content { 
+      width: 94%;
+  } 
+
   #main-body {
     display: block;
     margin: 0;

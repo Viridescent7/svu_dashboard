@@ -68,16 +68,9 @@ def render_sign_up(request):
 
 def render_wiki(request, path=None): 
 
-    if path == 'gemini': 
-        return render(request, 'articles/gemini.html') 
-    if path == 'intro_to_ssh':
-        return render(request, 'articles/intro_to_ssh.html') 
-    if path == 'why_use_commands':
-        return render(request, 'articles/why_use_commands.html') 
-    if path == 'in_the_beginning_was_the_commandline':
-        return render(request, 'articles/in_the_beginning_was_the_commandline.html') 
-    if path == 'intro_to_commands':
-        return render(request, 'articles/basics_of_commands.html') 
+    if path: 
+        full_path = "articles/{}.html".format(path) 
+        return render(request, full_path) 
     else:
         return render(request, 'wiki.html') 
 

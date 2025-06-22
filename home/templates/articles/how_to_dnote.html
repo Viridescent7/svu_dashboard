@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}SVU{% endblock %}
+{% block runner %}<h1 id="runner">How to use Dnote</h1> {% endblock %} 
+
+{% block main-content %}
+
+<p>
+Dnote is a simple command line notebook that lets you synchronize data accross multiple devices. For those of you who use the terminal, this can be extremely useful in saving scriplets and commands with obscure syntax. To use the Dnote server on SVU, you simply have to navigate to the Dnote service from the homepage and create an account. Then download the binary from <a href="https://github.com/dnote/dnote#installation">here</a>. Once this is done you can simply run the command 
+</p>
+<br>
+
+<pre><code>
+$ dnote --help 
+
+Dnote - a simple command line notebook
+
+Usage:
+  dnote [command]
+
+Available Commands:
+  add         Add a new note
+  edit        Edit a note or a book
+  find        Find notes by keywords
+  help        Help about any command
+  login       Login to dnote server
+  logout      Logout from the server
+  remove      Remove a note or a book
+  sync        Sync data with the server
+  version     Print the version number of Dnote
+  view        List books, notes or view a content
+
+Flags:
+  -h, --help   help for dnote
+</code></pre>
+<br>
+
+<p>
+The syntax of the command is pretty self explanatory. The sync option however remains to be configured. On your local machine navigate to the directory "$HOME/.config/dnote". Here you will see a file called "dnoterc" with three configuration options  
+</p>
+<br>
+
+<pre><code>
+editor: vim
+apiEndpoint: https://api.getdnote.com
+enableUpgradeCheck: true
+</code></pre>
+<br>
+
+<p>
+This is the default options. You can change the editor here if you prefer something else but the apiEndpoint must be changed to point to the svu server so Dnote can use our instance. Simply replace the apiEndpoint line with 
+</p>
+<br>
+
+<pre><code>apiEndpoint: http://100.72.58.114:3000/api</code></pre>
+<br>
+
+<p>
+Once this is done, save the file and execute 
+</p>
+<br>
+
+<pre><code>dnote login</code></pre>
+<br>
+
+<p>
+Login with your credentials and if the process is sucessfull you can now sync your personal notes to the Dnote server on SVU with the command 
+</p>
+<br>
+
+<pre><code>dnote sync</code></pre>
+<br>
+
+<p>
+I also have a crontab running which automates this process in the background
+</p>
+<br>
+
+<pre><code>*/5 * * * * /usr/local/bin/dnote sync</code></pre>
+<br>
+
+<p>
+Modify the dnote path according to your context and it your personal crontab. This makes the dnote sync command run every 5 minutes. Now whenever you add a note using dnote it will be automatically synced to the Dnote instance on SVU.
+</p>
+<br>
+
+{% endblock %}

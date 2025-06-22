@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}SVU{% endblock %}
+{% block runner %}<h1 id="runner">How to use Jellyfin and Jellyseer</h1> {% endblock %} 
+
+{% block main-content %}
+
+<p>
+I think Jellyfin and Jellyseer are by the far the most used services on SVU for obvious reasons. Jellyfin allows you to stream Movies, Shows and almost any kind of multi media content. So far the collection of Movies and Shows hosted on Jellyfin has been personally curated by all of us. The Jellyfin library has grown steadily and I see new requests almost every other 3 or 4 days. So I think its warranted to spend a little time dispelling any misconceptions on how it works so you can use it better.
+</p>
+<br>
+
+<p>
+The inner workings of Jellyfin is based upon something called a "client server architecture". Similar to how the interent works, we have one or more Jellyfin servers (in our case just one) that has all the content stored and they host them to Jellyfin clients connecting to it.
+</p>
+<br>
+
+<pre><code>
+     +-------------------+       +-------------------+       +-------------------+
+     |  Jellyfin Client  |       |  Jellyfin Client  |       |  Jellyfin Client  |
+     |     (Phone)       |       |   (Smart TV)      |       |   (Web Browser)   |
+     +-------------------+       +-------------------+       +-------------------+
+              \                          |                          /
+               \                         |                         /
+                \                        |                        /
+                 \                       |                       /
+                  \                      |                      /
+                   \                     |                     /
+                    \                    |                    /
+                     \                   |                   /
+                      \                  |                  /
+                       \                 |                 /
+                        \                |                /
+                         \               |               /
+                          v              v              v
+                          +-----------------------------+
+                          |        JELLYFIN SERVER       |
+                          |    (Streaming & Metadata)    |
+                          +-----------------------------+
+</code></pre>
+<br>
+
+<p>
+So there are 3 things you essentially need to use the Jellyfin server. You need a jellyfin account which you can create for yourself by contacting me. You then require a Jellyfin client. Most operating systems including IOs and Android have an official Jellyfin client which you can download from <a href="https://jellyfin.org/downloads/">here</a>
+</p>
+<br>
+
+<p>
+The last thing you need is a stable connection to the SVU server with tailscale. When you have all three of these, you simply need to open your Jellyfin client and enter the server address
+</p>
+<br>
+
+<pre><code>http://100.72.58.114:8096/</code></pre>
+<br>
+
+<p>
+Once the login process is over, you can browse our list of collections at your own leisure. You can have any number of jellyfin clients connected to the server, the only condition being that you must have tailscale installed in each of the clients. You can even directly use jellyfin with your browser by directly navigating to the link above, however you might not be able to play some Movies or Shows due to issues with video codec. You might even encounter this with a jellyfin client, so if you get a "Playback error" simply use the jellyfin client with an external video player like mpv or vlc. I would recommend <a href="https://mpv.io/">mpv</a>. You can instruct the jellyfin client to use the external player by navigating to the settings.
+</p>
+<br>
+
+<p>
+Along with Jellyfin, SVU also hosts another service called Jellyseer that lets you request content. You can navigate to the service from the homepage and use your jellyfin credentials to login. Once you create a request with Jellyseer, I have a telegram bot that sends a notification to a group. I then upload the content to the server.
+</p>
+<br>
+
+{% endblock %}

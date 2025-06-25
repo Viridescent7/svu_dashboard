@@ -65,6 +65,32 @@ ol {
     padding-left: 40px;
   }
 
+blockquote {
+  background-color: #000000; /* same as <pre> */
+  color: #b47bff;            /* neon purple text */
+  font-family: 'Anonymous Pro', monospace;
+  font-style: italic;
+  padding: 1.2rem;
+  border: 1px solid #2d0d45; /* same dark purple border */
+  box-shadow: 0 0 8px rgba(180, 123, 255, 0.15); /* subtle glow */
+  border-left: 4px solid #b47bff; /* add slight highlight */
+  border-radius: 6px;
+  white-space: normal;
+  line-height: 1.6;
+  position: relative;
+}
+blockquote::before {
+  content: "“";
+  font-size: 2.4rem;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  color: #b47bff;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+
 #navbar {
     border: 0.28rem solid;
     border-color:rgba(98,43,92,100);

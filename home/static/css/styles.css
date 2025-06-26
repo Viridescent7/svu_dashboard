@@ -271,6 +271,10 @@ blockquote::before {
     font-size: 1.4rem;
 }
 
+#all-users ul li a {
+    color: white;
+}
+
 #random-art { 
     border: 0.28rem solid;
     border-color:rgb(98,43,92);

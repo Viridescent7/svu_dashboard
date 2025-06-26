@@ -56,8 +56,12 @@
                  All Users: 
                 </h1>
                 <ul class="bullet list">
-                    {% for user in all_users %}
-                    <li>~{{ user }}</li>
+                    {% for user, site in all_users.items %}
+                        {% if site == None %}
+                            <li>~{{ user }}</li>
+                        {% else %} 
+                            <li><a href="{{ site }}">~{{ user }}</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>

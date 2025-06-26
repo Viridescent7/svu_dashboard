@@ -22,7 +22,14 @@ def index(request):
 
     # All users 
     tmp_users = os.popen('ls /home').readlines()
-    all_users = [ user.strip('\n') for user in tmp_users ]
+    all_user_list = [ user.strip('\n') for user in tmp_users ]
+    all_users = {}
+
+    for user in all_user_list: 
+        if user == 'mindhunter':
+            all_users[user] = "https://noumenalnotions.space" 
+        else: 
+            all_users[user] = None
 
     # Running services 
     services = { 

@@ -26,12 +26,13 @@ def index(request):
     all_users = {}
 
     for user in all_user_list: 
-        if user == 'mindhunter':
-            all_users[user] = "https://noumenalnotions.space" 
-        elif user == 'duckdarsh': 
-            all_users[user] = "https://duckdarsh.blog" 
-        else: 
-            all_users[user] = None
+        match user: 
+            case "mindhunter":
+                all_users[user] = "https://noumenalnotions.space" 
+            case "duckdarsh": 
+                all_users[user] = "https://duckdarsh.blog" 
+            case _: 
+                all_users[user] = None
 
     # Running services 
     services = { 

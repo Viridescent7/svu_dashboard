@@ -28,6 +28,8 @@ def index(request):
     for user in all_user_list: 
         if user == 'mindhunter':
             all_users[user] = "https://noumenalnotions.space" 
+        if user == 'duckdarsh': 
+            all_users[user] = "https://duckdarsh.blog" 
         else: 
             all_users[user] = None
 

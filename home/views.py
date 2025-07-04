@@ -31,6 +31,8 @@ def index(request):
                 all_users[user] = "https://noumenalnotions.space" 
             case "duckdarsh": 
                 all_users[user] = "https://duckdarsh.blog" 
+            case "bilgerat": 
+                all_users[user] = "https://bilgerat.xyz"
             case _: 
                 all_users[user] = None
 

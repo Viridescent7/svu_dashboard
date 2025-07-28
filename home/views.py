@@ -41,8 +41,7 @@ def index(request):
         'Dnote': ['3000', 'bi bi-journal', 'http'], 
         'Jellyfin': ['8096', 'bi bi-play-fill', 'http'], 
         'Jellyseer': ['5055', 'bi bi-binoculars-fill', 'http'],
-        'Hacktricks': ['3337', 'bi bi-bookmark-fill', 'http'],
-        'Hacktricks Cloud': ['3377', 'bi bi-cloud-haze-fill', 'http'],
+        'Nextcloud': ['8080', 'bi bi-cloud', 'http'],
         'KASM': ['8141', 'bi bi-pc-display-horizontal', 'https'],
         'Stump': ['10801', 'bi bi-book', 'http'],
         }
@@ -69,7 +68,7 @@ def index(request):
         'active_users': active_users,
         'all_users': all_users,
         'services': services,
-        'ip_addr': '100.72.58.114',
+        'ip_addr': 'svu.gentoo-gopher.ts.net',
         'quote': quote,
         'fortune': fortune,
         'uptime': uptime,

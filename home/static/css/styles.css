@@ -267,12 +267,17 @@ blockquote::before {
     color: red; 
 }
 
+
 #all-users h1 {
     font-size: 1.4rem;
 }
 
-#all-users ul li a {
+#all-users ul li {
     color: white;
+}
+
+#all-users ul li a {
+    color: #bbaedb;
 }
 
 #random-art { 

@@ -41,6 +41,7 @@ def index(request):
         'Dnote': ['3000', 'bi bi-journal', 'http'], 
         'Jellyfin': ['8096', 'bi bi-play-fill', 'http'], 
         'Jellyseer': ['5055', 'bi bi-binoculars-fill', 'http'],
+        'Rx Resume': ['5044', 'bi bi-file-earmark-person', 'http'],
         'Nextcloud': ['8080', 'bi bi-cloud', 'http'],
         'KASM': ['8141', 'bi bi-pc-display-horizontal', 'https'],
         'Stump': ['10801', 'bi bi-book', 'http'],
